@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+
+    --color-main:       #8BBB92;
+    --color-sec:        #2A835F;
+    --color-darker:     #12544F;
+    --color-secDarker:  #092328;
+    --color-light:      #ffffff;
+    --color-black:      #000000;
+
+    font-family: "Prompt", sans-serif;
+
+    background: var(--color-sec);
+    color: var(--color-light);
+}
+
+/* Main Tags */
+
+html, body {
+    height: 100%;
+}
+
+header {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+    margin: 0px 15px 15px 0px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 75px;
+}
+
+main section.content-row {
+    display: none;
+}
+
+main section.content-row.active {
+    display: flex;
+}
+
+main section.active {
+    display: flex;
+}
+
+/* Custom Tags */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 25px;
+    width: 100%;
+    max-width: 650px;
+    border-radius: 15px;
+}
+
+.dropbtn, .btnSection {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    padding: 0;
+    background: var(--color-black);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    border: 1px solid var(--color-accent);
+    border-radius: 12px;
+    background: var(--color-dark);
+    backdrop-filter: blur(10px);
+    min-width: max-content;
+    z-index: 10;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-content.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: var(--color-black);
+    color: var(--color-light);
+    cursor: default;
+    user-select: none;
+}
+
+.dropdown-content a.active {
+    background: var(--color-light);
+    color: var(--color-black);
+}
+
+/* Mobile Layout */
+
